@@ -127,7 +127,7 @@ var GeoJSONLayer = (function (_super) {
             }
         });
     };
-    GeoJSONLayer.prototype.componentWillMount = function () {
+    GeoJSONLayer.prototype.UNSAFE_componentWillMount = function () {
         var map = this.props.map;
         this.initialize();
         map.on('styledata', this.onStyleDataChange);

@@ -25,16 +25,16 @@ export declare function layerMouseTouchEvents(WrappedComponent: React.ComponentC
         onFeatureDragStart: (evt: any) => void;
         onFeatureDrag: (evt: any) => void;
         onFeatureDragEnd: (evt: any) => void;
-        componentWillMount(): void;
+        UNSAFE_componentWillMount(): void;
         componentWillUnmount(): void;
         render(): JSX.Element;
+        context: any;
         setState<K extends never>(state: {} | ((prevState: Readonly<{}>, props: Readonly<OwnProps>) => {} | Pick<{}, K> | null) | Pick<{}, K> | null, callback?: (() => void) | undefined): void;
         forceUpdate(callBack?: (() => void) | undefined): void;
         readonly props: Readonly<{
             children?: React.ReactNode;
         }> & Readonly<OwnProps>;
         state: Readonly<{}>;
-        context: any;
         refs: {
             [key: string]: React.ReactInstance;
         };
@@ -55,19 +55,20 @@ export declare function layerMouseTouchEvents(WrappedComponent: React.ComponentC
         onFeatureDragStart: (evt: any) => void;
         onFeatureDrag: (evt: any) => void;
         onFeatureDragEnd: (evt: any) => void;
-        componentWillMount(): void;
+        UNSAFE_componentWillMount(): void;
         componentWillUnmount(): void;
         render(): JSX.Element;
+        context: any;
         setState<K extends never>(state: {} | ((prevState: Readonly<{}>, props: Readonly<OwnProps>) => {} | Pick<{}, K> | null) | Pick<{}, K> | null, callback?: (() => void) | undefined): void;
         forceUpdate(callBack?: (() => void) | undefined): void;
         readonly props: Readonly<{
             children?: React.ReactNode;
         }> & Readonly<OwnProps>;
         state: Readonly<{}>;
-        context: any;
         refs: {
             [key: string]: React.ReactInstance;
         };
     };
+    contextType?: React.Context<any> | undefined;
 };
 export default layerMouseTouchEvents;

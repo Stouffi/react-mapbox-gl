@@ -85,7 +85,7 @@ var Cluster = (function (_super) {
         };
         return _this;
     }
-    Cluster.prototype.componentWillMount = function () {
+    Cluster.prototype.UNSAFE_componentWillMount = function () {
         var _a = this.props, children = _a.children, map = _a.map;
         if (children) {
             this.childrenChange(children);

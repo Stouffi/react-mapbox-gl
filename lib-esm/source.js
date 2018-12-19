@@ -68,7 +68,7 @@ var Source = (function (_super) {
         };
         return _this;
     }
-    Source.prototype.componentWillMount = function () {
+    Source.prototype.UNSAFE_componentWillMount = function () {
         var map = this.props.map;
         map.on('styledata', this.onStyleDataChange);
         this.initialize();

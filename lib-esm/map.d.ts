@@ -95,12 +95,12 @@ declare const ReactMapboxFactory: ({ accessToken, apiUrl, minZoom, maxZoom, hash
         componentWillReceiveProps(nextProps: Props & Events): null;
         setRef: (x: HTMLElement | null) => void;
         render(): JSX.Element;
+        context: any;
         setState<K extends "map" | "ready">(state: State | ((prevState: Readonly<State>, props: Readonly<Props & Events>) => State | Pick<State, K> | null) | Pick<State, K> | null, callback?: (() => void) | undefined): void;
         forceUpdate(callBack?: (() => void) | undefined): void;
         readonly props: Readonly<{
             children?: React.ReactNode;
         }> & Readonly<Props & Events>;
-        context: any;
         refs: {
             [key: string]: React.ReactInstance;
         };
@@ -116,12 +116,12 @@ declare const ReactMapboxFactory: ({ accessToken, apiUrl, minZoom, maxZoom, hash
         componentWillReceiveProps(nextProps: Props & Events): null;
         setRef: (x: HTMLElement | null) => void;
         render(): JSX.Element;
+        context: any;
         setState<K extends "map" | "ready">(state: State | ((prevState: Readonly<State>, props: Readonly<Props & Events>) => State | Pick<State, K> | null) | Pick<State, K> | null, callback?: (() => void) | undefined): void;
         forceUpdate(callBack?: (() => void) | undefined): void;
         readonly props: Readonly<{
             children?: React.ReactNode;
         }> & Readonly<Props & Events>;
-        context: any;
         refs: {
             [key: string]: React.ReactInstance;
         };
@@ -137,5 +137,6 @@ declare const ReactMapboxFactory: ({ accessToken, apiUrl, minZoom, maxZoom, hash
             textAlign: string;
         };
     };
+    contextType?: React.Context<any> | undefined;
 };
 export default ReactMapboxFactory;

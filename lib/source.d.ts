@@ -16,7 +16,7 @@ export interface LayerWithBefore extends Layer {
 export declare class Source extends React.Component<Props> {
     private id;
     private onStyleDataChange;
-    componentWillMount(): void;
+    UNSAFE_componentWillMount(): void;
     private initialize;
     private onData;
     removeSource(): LayerWithBefore[];

@@ -106,7 +106,7 @@ var ScaleControl = (function (_super) {
         };
         return _this;
     }
-    ScaleControl.prototype.componentWillMount = function () {
+    ScaleControl.prototype.UNSAFE_componentWillMount = function () {
         this.setScale();
         this.props.map.on('zoomend', this.setScale);
     };

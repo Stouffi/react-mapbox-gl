@@ -123,7 +123,7 @@ var Layer = (function (_super) {
         };
         return _this;
     }
-    Layer.prototype.componentWillMount = function () {
+    Layer.prototype.UNSAFE_componentWillMount = function () {
         var map = this.props.map;
         this.initialize();
         map.on('styledata', this.onStyleDataChange);
