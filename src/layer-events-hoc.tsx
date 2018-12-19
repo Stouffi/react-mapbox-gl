@@ -4,10 +4,11 @@ import { generateID } from './util/uid';
 import { LayerCommonProps, Props as LayerProps } from './layer';
 import { Map } from 'mapbox-gl';
 
-export interface EnhancedLayerProps {
+export type EnhancedLayerProps = {
   id?: string;
+} & {
   map: Map;
-}
+};
 
 export type OwnProps = EnhancedLayerProps & LayerCommonProps;
 

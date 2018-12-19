@@ -7,7 +7,7 @@ import * as bbox from '@turf/bbox';
 import { polygon, featureCollection } from '@turf/helpers';
 import { withMap } from './context';
 
-export interface Props {
+export type Props = {
   ClusterMarkerFactory(
     coordinates: GeoJSON.Position,
     pointCount: number,
@@ -28,8 +28,9 @@ export interface Props {
   style?: React.CSSProperties;
   className?: string;
   tabIndex?: number;
+} & {
   map: Map;
-}
+};
 
 export interface State {
   superC: Supercluster;

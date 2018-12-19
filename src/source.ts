@@ -3,14 +3,13 @@ import { Map, GeoJSONSource, GeoJSONSourceRaw, Layer } from 'mapbox-gl';
 import { TilesJson } from './util/types';
 import { withMap } from './context';
 
-export interface Props {
+export type Props = {
   id: string;
   geoJsonSource?: GeoJSONSourceRaw;
   tileJsonSource?: TilesJson;
-  map: Map;
   onSourceAdded?: (source: GeoJSONSource | TilesJson) => void;
   onSourceLoaded?: (source: GeoJSONSource | TilesJson) => void;
-}
+} & { map: Map };
 
 export interface LayerWithBefore extends Layer {
   before?: string;

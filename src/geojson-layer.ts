@@ -94,15 +94,18 @@ export interface Props
     | GeoJSON.Feature<GeoJSON.Geometry, GeoJSON.GeoJsonProperties>
     | GeoJSON.FeatureCollection<GeoJSON.Geometry>
     | string;
-  layerOptions?: MapboxGL.Layer;
+  layerOptions?: Partial<MapboxGL.Layer>;
   sourceOptions?:
     | MapboxGL.VectorSource
     | MapboxGL.RasterSource
     | MapboxGL.GeoJSONSource
     | MapboxGL.GeoJSONSourceRaw;
   before?: string;
-  map: MapboxGL.Map;
 }
+
+export type PropsWithMap = Props & {
+  map: MapboxGL.Map;
+};
 
 type MapboxEventTypes = Array<keyof MapboxGL.MapLayerEventType>;
 
@@ -117,7 +120,7 @@ type Layouts =
   | MapboxGL.CircleLayout
   | MapboxGL.FillExtrusionLayout;
 
-export class GeoJSONLayer extends React.Component<Props> {
+export class GeoJSONLayer extends React.Component<PropsWithMap> {
   private id: string = this.props.id || `geojson-${generateID()}`;
 
   // TODO: Refactor to use defaultProps

@@ -8,7 +8,7 @@ const defaultStyle = {
   zIndex: 3
 };
 
-export interface Props {
+export type Props = {
   type: 'marker' | 'popup';
   coordinates: [number, number];
   anchor?: Anchor;
@@ -23,8 +23,9 @@ export interface Props {
   style?: React.CSSProperties;
   className: string;
   tabIndex?: number;
+} & {
   map: Map;
-}
+};
 
 export class ProjectedLayer extends React.Component<Props, OverlayParams> {
   private container: HTMLElement | undefined = undefined;

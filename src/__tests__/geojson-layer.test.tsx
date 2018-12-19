@@ -1,10 +1,11 @@
 import * as React from 'react';
 import GeoJSONLayer from '../geojson-layer';
 import { getMapMock, mountWithMap } from '../jest/util';
+import { FeatureCollection } from 'geojson';
 
 describe('GeoJSONLayer', () => {
   const fillPaint = { 'fill-color': '#001122' };
-  const data = { type: 'FeatureCollection', features: [] };
+  const data: FeatureCollection = { type: 'FeatureCollection', features: [] };
 
   it('Should call addLayer with provided layerOptions', () => {
     const mapMock = getMapMock();
