@@ -53,15 +53,16 @@ const buttonStyleMinus = {
 const [PLUS, MINUS] = [0, 1];
 const POSITIONS = Object.keys(positions) as AnchorLimits[];
 
-export interface Props {
+export type Props = {
   zoomDiff?: number;
   onControlClick?: (map: Map, zoomDiff: number) => void;
   position?: AnchorLimits;
   style?: React.CSSProperties;
   className?: string;
   tabIndex?: number;
+} & {
   map: Map;
-}
+};
 
 export interface State {
   hover?: number;
