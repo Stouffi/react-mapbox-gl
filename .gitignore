@@ -2,8 +2,8 @@
 .vscode
 
 vendor/
-lib/
-lib-esm/
+# lib/
+# lib-esm/
 dist/
 es/
 www/
