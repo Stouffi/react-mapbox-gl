@@ -202,7 +202,7 @@ export default class Layer extends React.Component<Props> {
     }
   };
 
-  public componentWillMount() {
+  public UNSAFE_componentWillMount() {
     const { map } = this.props;
 
     this.initialize();

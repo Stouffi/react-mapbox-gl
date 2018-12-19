@@ -216,7 +216,7 @@ export function layerMouseTouchEvents(
       this.draggedChildren = undefined;
     };
 
-    public componentWillMount() {
+    public UNSAFE_componentWillMount() {
       const { map } = this.props;
 
       map.on('click', this.id, this.onClick);

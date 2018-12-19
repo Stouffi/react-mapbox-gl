@@ -238,7 +238,7 @@ export class GeoJSONLayer extends React.Component<PropsWithMap> {
     });
   }
 
-  public componentWillMount() {
+  public UNSAFE_componentWillMount() {
     const { map } = this.props;
     this.initialize();
     map.on('styledata', this.onStyleDataChange);

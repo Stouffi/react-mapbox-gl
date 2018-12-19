@@ -66,14 +66,13 @@ const MIN_WIDTH_SCALE = 60;
 
 export type Measurement = 'km' | 'mi';
 
-export interface Props {
+export type Props = {
   measurement?: Measurement;
   position?: AnchorLimits;
   style?: React.CSSProperties;
   className?: string;
   tabIndex?: number;
-  map: Map;
-}
+} & { map: Map };
 
 export interface State {
   chosenScale: number;
@@ -91,7 +90,7 @@ export class ScaleControl extends React.Component<Props, State> {
     scaleWidth: MIN_WIDTH_SCALE
   };
 
-  public componentWillMount() {
+  public UNSAFE_componentWillMount() {
     this.setScale();
 
     this.props.map.on('zoomend', this.setScale);

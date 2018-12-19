@@ -66,7 +66,7 @@ export class Cluster extends React.Component<Props, State> {
     React.ReactElement<MarkerProps>
   >();
 
-  public componentWillMount() {
+  public UNSAFE_componentWillMount() {
     const { children, map } = this.props;
 
     if (children) {

@@ -60,13 +60,12 @@ const compassSpan = {
 const [COMPASS] = [0];
 const POSITIONS = Object.keys(positions) as AnchorLimits[];
 
-export interface Props {
+export type Props = {
   position?: AnchorLimits;
   style?: React.CSSProperties;
   className?: string;
   tabIndex?: number;
-  map: Map;
-}
+} & { map: Map };
 
 export interface State {
   hover?: number;
